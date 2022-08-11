@@ -1,0 +1,58 @@
+1. git branch (hansi branch-da olduqunu check elemek ucun)
+2. git checkout new_branch (yeni yaradilmish branch-a kecid etmek ucun)
+3. git pull origin master (master-de olanlari goturmek ucun)
+4. git add, git commit
+5. git push origin new_branch (yeni branch-a hersheyi elave etmek ucun)
+6. git checkout master (master-e kecid etmek ucun)
+7. git pull origin master (masterde olan deyishiklikleri goturmek ucun)
+8. git merge --no-ff new_branch (yeni branch-la master-i merge etmek ucun)
+9. git push origin master
+
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
+
+sudo rm -rf pgdb
+sudo rm -rf */migrations/0*
+
+docker rm -f $(docker ps -aq)
+
+docker-compose down && docker-compose up -d --build
+docker-compose logs -f
+
+sudo fuser -k 8000/tcp
+
+**********************************************************
+celery -A superb worker --beat -S django -l info
+
+celery -A  superb beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+
+celery -A superb  worker --beat --scheduler django --loglevel=info
+
+****************************
+proyekti teze bashlamaq:
+
+mkdir foodstories
+sd foodstories
+code .
+python3 -m venv .venv
+source .venv/bin/activate
+pip install Django
+django-admin --version
+django-admin startproject foodstories .
+
+./manage.py startapp stories
+
+
+*****google oauth*****
+http://localhost:8000/complete/google-oauth2/
+Client ID
+581698628474-b6135ovlog7s90vatjjt5porbis08lhn.apps.googleusercontent.com
+Client secret
+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
+
+*********
+django generic:
+ccbv.co.uk
+
+**********
