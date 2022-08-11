@@ -10,6 +10,7 @@ from accounts.forms import LoginForm, RegisterForm
 from accounts.models import*
 
 
+
 class UserRegisterView(CreateView):
     form_class = RegisterForm
     template_name  = 'registr.html'
@@ -32,7 +33,8 @@ class UserLogoutView(LogoutView):
     pass
 
 
-
+def changepassword(request):
+    return render(request,'changepassword.html',)
 
 
 

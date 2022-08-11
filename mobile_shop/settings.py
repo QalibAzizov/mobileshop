@@ -80,11 +80,6 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '581698628474-b6135ovlog7s90vatjjt5porbis08lhn.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
-
-SOCIAL_AUTH_FACEBOOK_KEY = '575827674186604'
-SOCIAL_AUTH_FACEBOOK_SECRET = '246a2de45c11a181ae4cb7e13eb8ae39'
 
 WSGI_APPLICATION = 'mobile_shop.wsgi.application'
 
