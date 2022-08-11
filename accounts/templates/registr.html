@@ -1,0 +1,70 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+		<!-- BREADCRUMB -->
+		<div id="breadcrumb" class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-12">
+						<h3 class="breadcrumb-header">Regular Page</h3>
+						<ul class="breadcrumb-tree">
+							<li><a href="{% url 'home' %}">Home</a></li>
+							<li class="active">Registr</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /BREADCRUMB -->
+
+		<!-- SECTION -->
+		
+  <!-- Main Container -->
+  <section class="main-container col1-layout bounceInUp animated">
+    <div class="main container">
+      <div class="account-login">
+        <div class="page-title">
+          <h1>Create an Account</h1>
+        </div>
+        <fieldset class="col2-set">
+          
+          
+          <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {% for field in form %}
+            <div class="form-group" style="width:30%">
+              {{field.label_tag}}
+              {{field}}
+              <ul>
+                {% for error in field.errors %} 
+                <li>
+                  {{error}}
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endfor %}
+           
+            <button type="submit" class="btn btn-dark btn-lg">Submit</button>
+
+          </form>
+        </fieldset>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </section>
+  <!-- Main Container End --> 
+		<!-- /SECTION -->
+
+{% endblock %}
