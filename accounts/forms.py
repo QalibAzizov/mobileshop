@@ -2,7 +2,7 @@ from multiprocessing import AuthenticationError
 from django import forms
 from accounts.models import *
 from django.contrib.auth import get_user_model
-from django.contrib.auth.forms import  AuthenticationForm
+from django.contrib.auth.forms import  AuthenticationForm,PasswordChangeForm
 
 User = get_user_model()
 
@@ -66,4 +66,25 @@ class LoginForm(AuthenticationForm):
                 'class': 'form-control',
                 'placeholder': ' * Password',
             }))
+
+
+class CustomPasswordChangeForm(PasswordChangeForm):
+    old_password = forms.CharField(widget=forms.PasswordInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Old Password',
+            }))
+
+    new_password1 = forms.CharField(widget=forms.PasswordInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'New Password',
+            }))
+
     
+    new_password2 = forms.CharField(widget=forms.PasswordInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'New Password Confirmation',
+            }))
+
+    
+    
+

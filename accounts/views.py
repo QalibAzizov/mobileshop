@@ -1,12 +1,14 @@
 from django.shortcuts import render ,redirect
 from django.urls import reverse_lazy
+from django.http import HttpResponse
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView
-from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.views import LoginView, LogoutView,PasswordChangeView
 from django.contrib.auth import authenticate 
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
-from accounts.forms import LoginForm, RegisterForm
+from accounts.forms import LoginForm, RegisterForm ,CustomPasswordChangeForm
 from accounts.models import*
 
 
@@ -28,18 +30,19 @@ class UserLoginView(LoginView):
     template_name = 'login.html'
 
 
+class ChangePasswordView(LoginRequiredMixin,PasswordChangeView):
+    form_class = CustomPasswordChangeForm
+    template_name = 'changepassword.html'
+    success_url = reverse_lazy('login')
+
+    def get_success_url(self):
+        messages.add_message(self.request, messages.SUCCESS, 'You change password successful')
+        return super().get_success_url()
+
+
 class UserLogoutView(LogoutView):
     
     pass
-
-
-def changepassword(request):
-    return render(request,'changepassword.html',)
-
-
-
-
-
 
 
 

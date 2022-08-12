@@ -81,6 +81,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 
+
 WSGI_APPLICATION = 'mobile_shop.wsgi.application'
 
 
