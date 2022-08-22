@@ -44,15 +44,9 @@ django-admin startproject foodstories .
 ./manage.py startapp stories
 
 
-*****google oauth*****
-http://localhost:8000/complete/google-oauth2/
-Client ID
-581698628474-b6135ovlog7s90vatjjt5porbis08lhn.apps.googleusercontent.com
-Client secret
-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
-
-*********
 django generic:
 ccbv.co.uk
 
 **********
+
+pip install -r requirements.txt

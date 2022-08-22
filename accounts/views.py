@@ -3,13 +3,34 @@ from django.urls import reverse_lazy
 from django.http import HttpResponse
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import CreateView
-from django.contrib.auth.views import LoginView, LogoutView,PasswordChangeView
+from django.contrib.auth.views import LoginView, LogoutView,PasswordChangeView,PasswordResetView, PasswordResetConfirmView
 from django.contrib.auth import authenticate 
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
-from accounts.forms import LoginForm, RegisterForm ,CustomPasswordChangeForm
+from accounts.forms import LoginForm, RegisterForm ,CustomPasswordChangeForm,CustomPasswordResetForm,CustomSetPasswordForm
+
 from accounts.models import*
+
+class CustomPasswordResetConfirmView(PasswordResetConfirmView):
+    template_name = 'resetpassword.html'
+    form_class = CustomSetPasswordForm
+    success_url = reverse_lazy('home')
+
+    def get_success_url(self):
+        messages.success(self.request, 'Your Password is changed')
+        return super(CustomPasswordResetConfirmView,self).get_success_url()
+
+
+class CustomPasswordResetView(PasswordResetView):
+    email_template_name = 'email/password-reset.html'
+    form_class = CustomPasswordResetForm
+    template_name = 'forgetpassword.html'
+    success_url = reverse_lazy('home')
+
+    def get_success_url(self):
+        messages.success(self.request, 'Check your email')
+        return super(CustomPasswordResetView,self).get_success_url()
 
 
 
