@@ -17,7 +17,6 @@ class DiscountAdmin(admin.ModelAdmin):
      search_fields =('title','percentage',)
 
 
-
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('title',)

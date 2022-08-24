@@ -31,7 +31,8 @@ class Contact(AbsrtactModel):
 
 
 class Category(AbsrtactModel):
-    title = models.CharField('category_name',max_length=100)
+    title = models.CharField('category_name',max_length=100, db_index=True)
+    slug = models.SlugField( max_length=255, db_index=True, editable=False)
     cover_image = models.ImageField(upload_to = 'cateqory/',null = True, blank=True )
 
 
@@ -50,7 +51,8 @@ class Category(AbsrtactModel):
 
 
 class Brand(AbsrtactModel):
-    title = models.CharField('brand',max_length=100)
+    title = models.CharField('brand',max_length=100, db_index=True)
+    slug = models.SlugField( max_length=255, db_index=True, editable=False)
 
 
     def __str__(self):
@@ -68,6 +70,7 @@ class Brand(AbsrtactModel):
 
 class Discount(AbsrtactModel):
     title = models.CharField(max_length=100)
+    slug = models.SlugField( max_length=255, db_index=True, editable=False)
     percentage = models.IntegerField()
 
     def __str__(self):
@@ -84,7 +87,9 @@ class Product(AbsrtactModel):
     category = models.ForeignKey(Category, related_name='product_categories', on_delete=models.CASCADE)
     brand = models.ForeignKey(Brand, related_name='product_brands', on_delete=models.CASCADE)
     image = models.ImageField(upload_to="product/")
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, db_index=True)
+    slug = models.SlugField( max_length=255, db_index=True, editable=False)
+
     code = models.IntegerField()
     price = models.IntegerField(null = True, blank=True)
     sellprice = models.IntegerField()
@@ -94,7 +99,7 @@ class Product(AbsrtactModel):
 
     def get_absolute_url(self):
         return reverse_lazy('product', kwargs={
-            'id' : self.id
+            'slug' : self.slug
         })
 
 

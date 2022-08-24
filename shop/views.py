@@ -20,6 +20,7 @@ def home(request):
         'product': product,
         'category': category,
         'brand ' : brand ,
+        
     
     }
 
@@ -41,8 +42,8 @@ def store(request):
     return render(request,'store.html', context)
 
 
-def product(request, id):
-    product = get_object_or_404(Product,id=id)
+def product(request, slug):
+    product = get_object_or_404(Product,slug=slug )
     category = Category.objects.all()
     brand = Brand.objects.all()
 
@@ -51,6 +52,7 @@ def product(request, id):
         'product': product,
         'category': category,
         'brand ': brand ,
+        
     }
     
     return render(request,'product.html',context)
