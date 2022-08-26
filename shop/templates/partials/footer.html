@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <!-- NEWSLETTER -->
 <div id="newsletter" class="section">
@@ -8,10 +9,10 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="newsletter">
-                    <p>Sign Up for the <strong>NEWSLETTER</strong></p>
+                    <p>{% trans 'Sign Up for the' %} <strong>{% trans 'NEWSLETTER' %}</strong></p>
                     <form>
                         <input class="input" type="email" placeholder="Enter Your Email">
-                        <button class="newsletter-btn"><i class="fa fa-envelope"></i> Subscribe</button>
+                        <button class="newsletter-btn"><i class="fa fa-envelope"></i>{% trans ' Subscribe' %}</button>
                     </form>
                     <ul class="newsletter-follow">
                         <li>
@@ -45,7 +46,7 @@
                 <div class="row">
                     <div class="col-md-3 col-xs-6">
                         <div class="footer">
-                            <h3 class="footer-title">About Us</h3>
+                            <h3 class="footer-title">{% trans 'About Us' %}</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
                             <ul class="footer-links">
                                 <li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
@@ -57,7 +58,7 @@
 
                     <div class="col-md-3 col-xs-6">
                         <div class="footer">
-                            <h3 class="footer-title">Categories</h3>
+                            <h3 class="footer-title">{% trans 'Categories' %}</h3>
                             <ul class="footer-links">
                                 <li><a href="#">Hot deals</a></li>
                                 <li><a href="#">Laptops</a></li>
@@ -72,26 +73,26 @@
 
                     <div class="col-md-3 col-xs-6">
                         <div class="footer">
-                            <h3 class="footer-title">Information</h3>
+                            <h3 class="footer-title">{% trans 'Information' %}</h3>
                             <ul class="footer-links">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Orders and Returns</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">{% trans 'About Us' %}</a></li>
+                                <li><a href="#">{% trans 'Contact Us' %}</a></li>
+                                <li><a href="#">{% trans 'Privacy Policy' %}</a></li>
+                                <li><a href="#">{% trans 'Orders and Returns' %}</a></li>
+                                <li><a href="#">{% trans 'Terms & Conditions' %}</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="col-md-3 col-xs-6">
                         <div class="footer">
-                            <h3 class="footer-title">Service</h3>
+                            <h3 class="footer-title">{% trans 'Service' %}</h3>
                             <ul class="footer-links">
-                                <li><a href="#">My Account</a></li>
-                                <li><a href="{% url 'blank' %}">View Cart</a></li>
-                                <li><a href="#">Wishlist</a></li>
-                                <li><a href="#">Track My Order</a></li>
-                                <li><a href="#">Help</a></li>
+                                <li><a href="#">{% trans 'My Account' %}</a></li>
+                                <li><a href="{% url 'blank' %}">{% trans 'View Cart' %}</a></li>
+                                <li><a href="#">{% trans 'Wishlist' %}</a></li>
+                                <li><a href="#">{% trans 'Track My Order' %}</a></li>
+                                <li><a href="#">{% trans 'Help' %}</a></li>
                             </ul>
                         </div>
                     </div>

@@ -15,7 +15,7 @@ pip install -r requirements.txt
 sudo rm -rf pgdb
 sudo rm -rf */migrations/0*
 
-docker rm -f $(docker ps -aq)
+docker rm -rf $(docker ps -aq)
 
 docker-compose down && docker-compose up -d --build
 docker-compose logs -f
@@ -50,3 +50,11 @@ ccbv.co.uk
 **********
 
 pip install -r requirements.txt
+
+**********
+Django translate:
+
+ ./manage.py makemessages -l en
+ ./manage.py compilemessages -l en
+
+ ************

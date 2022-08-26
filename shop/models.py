@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 from django.forms import EmailField
 from django.urls import reverse_lazy
 from django.contrib.auth import get_user_model
