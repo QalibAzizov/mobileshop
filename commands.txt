@@ -55,6 +55,6 @@ pip install -r requirements.txt
 Django translate:
 
  ./manage.py makemessages -l en
- ./manage.py compilemessages -l en
+ 
 
  ************

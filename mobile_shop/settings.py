@@ -36,6 +36,7 @@ AUTH_USER_MODEL = 'accounts.User'
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'social_django',
-
+    'rest_framework',
+    
     'shop',
     'accounts',
 ]
@@ -61,6 +63,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'mobile_shop.urls'
+
+REST_FRAMEWORK = {
+    'DATETIME_FORMAT': "%Y-%m-%d %H:%M:%S",
+    
+}
 
 TEMPLATES = [
     {
@@ -163,7 +170,7 @@ LANGUAGES = [
     ('az', _('Azerbaijan')),
 ]
 
-MODELTRANSLATION_DEFAULT_LANGUAGE = 'az'
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
 
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale')

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-26 12:49+0000\n"
+"POT-Creation-Date: 2022-08-27 06:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,11 +46,11 @@ msgstr ""
 msgid "The %(site_name)s team"
 msgstr ""
 
-#: mobile_shop/settings.py:162
+#: mobile_shop/settings.py:164
 msgid "English"
 msgstr ""
 
-#: mobile_shop/settings.py:163
+#: mobile_shop/settings.py:165
 msgid "Azerbaijan"
 msgstr ""
 
@@ -119,26 +119,26 @@ msgstr ""
 msgid "Help"
 msgstr ""
 
-#: shop/templates/partials/navbar.html:25
+#: shop/templates/partials/navbar.html:36
 msgid "LOGOUT"
-msgstr "CİXİŞ"
+msgstr ""
 
-#: shop/templates/partials/navbar.html:28
+#: shop/templates/partials/navbar.html:39
 msgid "LOGIN"
-msgstr "GİRİŞ"
+msgstr ""
 
-#: shop/templates/partials/navbar.html:57
+#: shop/templates/partials/navbar.html:68
 msgid "All Categories"
-msgstr "Categoriyalar"
+msgstr ""
 
-#: shop/templates/partials/navbar.html:62
+#: shop/templates/partials/navbar.html:73
 msgid "Search"
-msgstr "Axtar"
+msgstr ""
 
-#: shop/templates/partials/navbar.html:75
+#: shop/templates/partials/navbar.html:86
 msgid "Your Wishlist"
-msgstr "Bəyəndikləriniz"
+msgstr ""
 
-#: shop/templates/partials/navbar.html:85
+#: shop/templates/partials/navbar.html:96
 msgid "Your Cart"
-msgstr "Səbətiniz"
+msgstr ""
