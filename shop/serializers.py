@@ -39,8 +39,6 @@ class ProductSerializer(serializers.ModelSerializer):
     brand = serializers.CharField(source = 'brand.title')
     category = serializers.CharField(source = 'category.title')
    
-    
-
     class Meta:
         model = Product
         fields = (
