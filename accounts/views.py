@@ -69,6 +69,9 @@ class UserLogoutView(LogoutView):
 
 
 
+
+
+
 # login an logout using function
 #_____________________________________________________________
 # def login(request):

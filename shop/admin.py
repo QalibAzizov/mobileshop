@@ -35,3 +35,5 @@ class BrandAdmin(TranslationAdmin):
 class ImageAdmin(admin.ModelAdmin):
     
      list_filter = ['created_at']
+
+

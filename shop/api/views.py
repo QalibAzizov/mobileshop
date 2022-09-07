@@ -61,4 +61,7 @@ class ProductDetailAPI(APIView):
             serializer = ProductSerializer(product,  context ={'request': self.request})
             return Response(data = serializer.data, status=HTTP_200_OK)    
             
-               
+
+
+
+

@@ -23,11 +23,13 @@ docker-compose logs -f
 sudo fuser -k 8000/tcp
 
 **********************************************************
-celery -A superb worker --beat -S django -l info
+celery -A mobile_shop beat -l info 
 
-celery -A  superb beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+celery -A mobile_shop worker --beat -S django -l info
 
-celery -A superb  worker --beat --scheduler django --loglevel=info
+celery -A  mobile_shop beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+
+celery -A mobile_shop  worker --beat --scheduler django --loglevel=info
 
 ****************************
 proyekti teze bashlamaq:

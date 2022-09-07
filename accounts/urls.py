@@ -1,12 +1,17 @@
 from django.urls import path, include ,re_path
-
-from accounts.views import  UserRegisterView, UserLoginView,UserLogoutView,ChangePasswordView,CustomPasswordResetView,CustomPasswordResetConfirmView
+from accounts.views import (
+    UserRegisterView,
+    UserLoginView,
+    UserLogoutView,
+    ChangePasswordView,
+    CustomPasswordResetView,
+    CustomPasswordResetConfirmView
+) 
  
 
 
 urlpatterns = [
   
-
     path('forget-password', CustomPasswordResetView.as_view(),name='password-reset'),
     path('logout',  UserLogoutView.as_view(), name='logout'),
     path('login', UserLoginView.as_view() , name='login'),
