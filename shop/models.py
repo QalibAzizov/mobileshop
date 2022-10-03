@@ -24,7 +24,7 @@ class Contact(AbsrtactModel):
 
 
     def __str__(self) :
-        return self.name
+        return self.first_name
 
     class Meta:
         verbose_name = 'contact'
